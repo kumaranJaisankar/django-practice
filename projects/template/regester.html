@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>regester form</title>
+  </head>
+  <body>
+    <div>
+      <h1>regester form</h1>
+      <form action="insertuser" name="regester" method="post">
+        {%csrf_token%}
+        <pre>
+            UID    : <input type="text" name="tuid" value="" width="200"><br/>
+            NAME    : <input type="text" name="tuname" value="" width="200"><br/>
+            EMAIL   : <input type="text" name="tuemail" value="" width="200"><br/>
+            contact : <input type="text" name="tucontact" value="" width="200"><br/>
+
+            <input type="submit" value="register" width="300" height="100">
+        </pre>
+      </form>
+    </div>
+  </body>
+</html>

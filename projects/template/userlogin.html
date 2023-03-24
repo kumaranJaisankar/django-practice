@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body bgcolor="cyan">
+    <div
+      style="
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <h1>Login page</h1>
+      <form action="" name="regester" method="post" autocomplete="off">
+        <pre>
+            {%csrf_token%}
+            
+            USER NAME        : <input type="text"  value="" placeholder="User Name" name="username" value="" width="200"><br/>
+            PASSWORD         : <input type="password"  value="" placeholder="password"  name="password" value="" width="200"><br/>
+                               <input type="submit" style="margin-top:10px;outline: none;border-radius:5px; border:none;padding:5px;color:rgb(52, 167, 196);cursor:pointer;font-weight:bolder;" value="Login" width="300" height="100"> <a href="/accounts/register">Create account?</a>
+        </pre>
+      </form>
+      <div>
+        {%for message in messages%}
+        <h3 style="color: red">*{{message}}</h3>
+        {%endfor%}
+      </div>
+    </div>
+  </body>
+</html>

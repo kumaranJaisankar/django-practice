@@ -1,0 +1,32 @@
+{% extends 'base.html'%} {%block content%}
+<div style="background-color: white; padding: 10px">
+  <h2
+    style="
+      color: brown;
+      font-style: italic;
+      font-size: 40px;
+      text-transform: uppercase;
+    "
+  >
+    my name is {{name}},<br />
+    age {{age}}
+  </h2>
+  <p>chennai, india</p>
+</div>
+<form
+  method="post"
+  action="add"
+  style="
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  "
+>
+  {%csrf_token%} enter 1st Number: <input type="text" name="num1" /> enter 2st
+  Number:
+  <input type="text" name="num2" />
+  <input type="submit" value="RESULT" />
+</form>
+
+{% endblock %}
